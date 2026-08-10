@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskar Yadav | Public Systems & Data Specialist</title>
+    
+    <!-- FAVICON: Linked PNG -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/d1QrMyXx/SYfavicon.png">
+
+    <!-- SEO: Meta Descriptions -->
+    <meta name="description" content="Sanskar Yadav is a Public Systems & Data Specialist helping organizations optimize governance, political intelligence, and public issue monitoring through data analytics.">
+    <meta name="keywords" content="Sanskar Yadav, Political Consultant, Data Scientist, Governance Tech, Public Systems, Gwalior, SEO Specialist, Public Policy">
+    <meta name="author" content="Sanskar Yadav">
+
+    <!-- SEO: Open Graph / Social Sharing -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Sanskar Yadav | Public Systems & Data Specialist">
+    <meta property="og:description" content="Building data-driven solutions for governance, public issues, and organizational decision-making.">
+    <meta property="og:image" content="https://i.postimg.cc/bYM97CTm/sanskar-yadav-profile-image.webp">
+    <meta property="og:url" content="https://www.sanskaryadav.in/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@sanskarydv22">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Fonts: Outfit (Headings - Modern & Clean) & Inter (Body - Readable) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sanskar Yadav",
+      "jobTitle": "Public Systems & Data Specialist",
+      "url": "https://www.sanskaryadav.in",
+      "sameAs": [
+        "https://www.linkedin.com/in/sanskarydv22",
+        "https://x.com/sanskarydv22"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gwalior",
+        "addressRegion": "Madhya Pradesh",
+        "addressCountry": "India"
+      },
+      "alumniOf": "Jiwaji University"
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .heading-font { font-family: 'Outfit', sans-serif; }
+        
+        html { scroll-behavior: smooth; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .reveal-btn:hover { cursor: pointer; text-decoration: underline; color: #fbbf24; }
+        
+        /* Active Nav Link State */
+        .nav-link.active { color: #0C4DA2; font-weight: 600; position: relative; }
+        .nav-link.active::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background-color: #0C4DA2; border-radius: 2px;
+        }
+
+        /* Profile Image Container - Professional Glass/Card Look */
+        .profile-container {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            box-shadow: 0 10px 30px -10px rgba(12, 77, 162, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100 py-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="font-bold text-xl tracking-tight cursor-pointer heading-font text-slate-900 hover:text-[#0C4DA2] transition-colors uppercase" onclick="scrollToSection('hero')">
+                    Sanskar Yadav
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm text-slate-600">
+                    <button onclick="scrollToSection('about')" class="nav-link hover:text-[#0C4DA2] transition-colors py-1">About</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link hover:text-[#0C4DA2] transition-colors py-1">Projects</button>
+                    <button onclick="scrollToSection('skills')" class="nav-link hover:text-[#0C4DA2] transition-colors py-1">Capabilities</button>
+                    <button onclick="scrollToSection('experience')" class="nav-link hover:text-[#0C4DA2] transition-colors py-1">Experience</button>
+                    <button onclick="scrollToSection('contact')" class="px-5 py-2.5 rounded-md text-white font-medium transition-all hover:bg-blue-800 bg-[#0C4DA2] shadow-sm hover:shadow">
+                        Contact
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-slate-800 focus:outline-none p-2 rounded hover:bg-slate-100">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                        <i data-lucide="x" id="close-icon" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full border-b border-slate-200 shadow-lg top-full left-0 transition-all duration-200">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <button onclick="scrollToSection('about')" class="block px-4 py-3 text-left text-slate-600 font-medium hover:bg-slate-50 rounded-md">About</button>
+                <button onclick="scrollToSection('projects')" class="block px-4 py-3 text-left text-slate-600 font-medium hover:bg-slate-50 rounded-md">Projects</button>
+                <button onclick="scrollToSection('skills')" class="block px-4 py-3 text-left text-slate-600 font-medium hover:bg-slate-50 rounded-md">Capabilities</button>
+                <button onclick="scrollToSection('experience')" class="block px-4 py-3 text-left text-slate-600 font-medium hover:bg-slate-50 rounded-md">Experience</button>
+                <button onclick="scrollToSection('contact')" class="block px-4 py-3 text-left text-[#0C4DA2] font-bold bg-blue-50 rounded-md mt-2">Contact Me</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 overflow-hidden bg-white">
+        <!-- Background Pattern: Subtle Grid for Tech Feel -->
+        <div class="absolute inset-0 z-0 opacity-[0.03]" 
+             style="background-image: linear-gradient(#0C4DA2 1px, transparent 1px), linear-gradient(90deg, #0C4DA2 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 relative z-10">
+            
+            <!-- Left: Text -->
+            <div class="flex-1 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-widest text-[#0C4DA2] uppercase bg-blue-50 border border-blue-100 rounded-md">
+                    Governance • Data • Intelligence
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-4 heading-font leading-[1.1]">
+                    Sanskar Yadav
+                </h1>
+                <h2 class="text-xl md:text-2xl font-medium text-slate-500 mb-6 heading-font">
+                    Public Systems & Data Specialist
+                </h2>
+                <p class="text-lg text-slate-600 max-w-lg mx-auto md:mx-0 leading-relaxed mb-8">
+                    Building data-driven solutions for governance, public issues, and organizational decision-making using Python, AI, and strategic analysis.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <button onclick="scrollToSection('projects')" class="px-8 py-3 rounded-md text-white font-semibold text-base transition-all shadow hover:shadow-lg bg-[#0C4DA2] hover:bg-blue-800">
+                        View Projects
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="px-8 py-3 rounded-md bg-white border border-slate-300 text-slate-700 font-semibold text-base transition-all hover:border-[#0C4DA2] hover:text-[#0C4DA2]">
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Profile Image (New Professional Design) -->
+            <div class="flex-1 flex justify-center md:justify-end">
+                <div class="relative w-56 h-56 md:w-72 md:h-72 profile-container rounded-full overflow-hidden flex items-end justify-center">
+                    <!-- Subtle inner glow -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-100/50 to-transparent"></div>
+                    
+                    <!-- The Image -->
+                    <img src="https://i.postimg.cc/bYM97CTm/sanskar-yadav-profile-image.webp" 
+                         alt="Sanskar Yadav" 
+                         class="relative w-[115%] h-auto object-contain z-10 transform translate-y-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <h3 class="text-sm font-bold tracking-widest text-[#0C4DA2] uppercase mb-4 heading-font">About Me</h3>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 heading-font">Bridging Policy & Technology</h2>
+            
+            <div class="prose prose-lg text-slate-600 leading-relaxed">
+                <p class="mb-6">
+                    I am a Public Systems and Data professional focused on solving governance and organizational challenges using technology, analytics, and structured research.
+                </p>
+                <p class="mb-8">
+                    With a background in Economics and training in Python, Data Science, and AI, I work at the intersection of public issues, data analysis, and digital systems. I am particularly interested in building scalable digital tools that improve governance, transparency, and citizen engagement.
+                </p>
+                
+                <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                    <p class="font-bold text-slate-900 text-lg mb-4 heading-font">Key Focus Areas</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-[#0C4DA2] rounded-full mr-3"></div><span class="text-sm font-medium">Public issue monitoring</span></div>
+                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-[#0C4DA2] rounded-full mr-3"></div><span class="text-sm font-medium">Data-driven decision support</span></div>
+                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-[#0C4DA2] rounded-full mr-3"></div><span class="text-sm font-medium">Grievance systems</span></div>
+                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-[#0C4DA2] rounded-full mr-3"></div><span class="text-sm font-medium">Administrative intelligence</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 sm:px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <h3 class="text-sm font-bold tracking-widest text-[#0C4DA2] uppercase mb-3 heading-font">Portfolio</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 heading-font">Selected Projects</h2>
+                </div>
+                <p class="text-slate-600 max-w-lg mt-4 md:mt-0 text-sm">
+                    Technological interventions designed to streamline governance and enhance public understanding.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Project 1 -->
+                <a href="https://gwalior.surendrayadav.com/" target="_blank" rel="noopener follow" class="group bg-white rounded-lg border border-slate-200 p-8 hover:shadow-lg transition-all duration-300 hover:border-blue-300 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-blue-50 rounded-md text-[#0C4DA2]">
+                            <i data-lucide="globe" size={24}></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-green-50 text-green-700 text-[11px] font-bold uppercase tracking-wider rounded border border-green-100 flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Live
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0C4DA2] transition-colors flex items-center gap-2 heading-font">
+                        Gwalior Jan Samasya Portal
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
+                        Designed and launched a digital grievance collection platform for ward-level public issues including water, roads, sanitation, electricity, and health. Centralizes citizen feedback for data-based local decision-making.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Civic Tech</span>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">React</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://jade-haupia-38998c.netlify.app/" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-lg border border-slate-200 p-8 hover:shadow-lg transition-all duration-300 hover:border-blue-300 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-blue-50 rounded-md text-[#0C4DA2]">
+                            <i data-lucide="activity" size={24}></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-green-50 text-green-700 text-[11px] font-bold uppercase tracking-wider rounded border border-green-100 flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Live
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0C4DA2] transition-colors flex items-center gap-2 heading-font">
+                        Ujjain Division Intelligence
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
+                        Conducted AI-assisted research and analysis of district-level public issues across sectors. Produced structured reports with high-impact issue identification.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Policy Research</span>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Analytics</span>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <div class="group bg-white rounded-lg border border-slate-200 p-8 hover:shadow-lg transition-all duration-300 hover:border-blue-300 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-blue-50 rounded-md text-[#0C4DA2]">
+                            <i data-lucide="database" size={24}></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider rounded border border-slate-200">
+                            Internal Tool
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0C4DA2] transition-colors heading-font">
+                        Electoral Roll Analysis
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
+                        Developed a Python-based approach to extract voter data from non-OCR PDFs, clean records, and detect potential duplicate entries using fuzzy matching techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">OCR</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group bg-white rounded-lg border border-slate-200 p-8 hover:shadow-lg transition-all duration-300 hover:border-blue-300 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-blue-50 rounded-md text-[#0C4DA2]">
+                            <i data-lucide="cpu" size={24}></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider rounded border border-slate-200">
+                            Workflow
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0C4DA2] transition-colors heading-font">
+                        AI Workflow for Public Comm.
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
+                        Designed AI-assisted workflows for monitoring issues, generating structured content, and improving operational efficiency for public messaging teams.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">GenAI</span>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Automation</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="mb-12">
+                <h3 class="text-sm font-bold tracking-widest text-blue-400 uppercase mb-3 heading-font">Capabilities</h3>
+                <h2 class="text-3xl md:text-4xl font-bold heading-font">Core Competencies</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Column 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i data-lucide="users" class="text-blue-400" size={24}></i>
+                        <h3 class="text-lg font-bold heading-font">Public Systems</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Governance Analysis</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Public Issue Monitoring</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Organizational Intelligence</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i data-lucide="bar-chart-3" class="text-blue-400" size={24}></i>
+                        <h3 class="text-lg font-bold heading-font">Data & Tech</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Python & Data Analysis</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>AI Tools & Automation</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Workflow Design</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i data-lucide="file-text" class="text-blue-400" size={24}></i>
+                        <h3 class="text-lg font-bold heading-font">Research</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Policy Research</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Issue Intelligence</li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-500 mr-2"></i>Digital Strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Timeline (Experimental & Interesting) -->
+    <section id="experience" class="py-24 bg-slate-50 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Decorator -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h3 class="text-sm font-bold tracking-widest text-[#0C4DA2] uppercase mb-3 heading-font">Track Record</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 heading-font">Experience Snapshot</h2>
+            </div>
+
+            <div class="relative">
+                <!-- Center Line (Hidden on Mobile, Visible on Desktop) -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200"></div>
+                
+                <!-- Mobile Line -->
+                <div class="md:hidden absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200"></div>
+
+                <div class="space-y-12">
+                    
+                    <!-- Item 1 (Right on Desktop) -->
+                    <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center group">
+                        <!-- Icon Marker -->
+                        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-100 flex items-center justify-center z-10 shadow-sm group-hover:scale-110 group-hover:border-[#0C4DA2] transition-all duration-300">
+                            <i data-lucide="briefcase" class="text-[#0C4DA2] w-5 h-5"></i>
+                        </div>
+
+                        <!-- Date (Left Side Desktop) -->
+                        <div class="hidden md:block text-right pr-12">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#0C4DA2] font-bold text-sm border border-blue-100">
+                                2025 - Present
+                            </span>
+                        </div>
+
+                        <!-- Card (Right Side Desktop) -->
+                        <div class="ml-16 md:ml-0 md:col-start-2">
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative">
+                                <!-- Mobile Date -->
+                                <div class="md:hidden mb-3">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-blue-50 text-[#0C4DA2] font-bold text-xs border border-blue-100">
+                                        2025 - Present
+                                    </span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg heading-font mb-1">Digital Communication & Strategy</h3>
+                                <div class="text-xs font-bold text-[#0C4DA2] uppercase tracking-wide mb-3">Public Sector / Political Projects</div>
+                                <ul class="space-y-2 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                                    <li>Managing digital communication workflows for district-level political leadership</li>
+                                    <li>Monitoring public issues and developing issue-based content strategies</li>
+                                    <li>Supporting event communication, rapid-response messaging, and public engagement</li>
+                                    <li>Designing AI-assisted systems for issue tracking and workflow optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Left on Desktop) -->
+                    <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center group">
+                         <!-- Icon Marker -->
+                         <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-100 flex items-center justify-center z-10 shadow-sm group-hover:scale-110 group-hover:border-[#0C4DA2] transition-all duration-300">
+                            <i data-lucide="laptop" class="text-[#0C4DA2] w-5 h-5"></i>
+                        </div>
+
+                        <!-- Card (Left Side Desktop) -->
+                        <div class="ml-16 md:ml-0">
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative text-left">
+                                 <!-- Mobile Date -->
+                                 <div class="md:hidden mb-3">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-bold text-xs border border-slate-200">
+                                        Aug 2024 - Mar 2025
+                                    </span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg heading-font mb-1">Independent Digital Consultant</h3>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">Freelance Projects</div>
+                                <ul class="space-y-2 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                                    <li>Implemented SEO and digital visibility strategy for Amazing Group of Hotels (Uttarakhand)</li>
+                                    <li>Managed SEO and performance optimization for Nailinit (Mumbai)</li>
+                                    <li>Designed AI-assisted workflows to improve content consistency and operational efficiency</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Date (Right Side Desktop) -->
+                        <div class="hidden md:block pl-12">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-600 font-bold text-sm border border-slate-200">
+                                Aug 2024 - Mar 2025
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Right on Desktop) -->
+                    <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center group">
+                         <!-- Icon Marker -->
+                         <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-100 flex items-center justify-center z-10 shadow-sm group-hover:scale-110 group-hover:border-[#0C4DA2] transition-all duration-300">
+                            <i data-lucide="trending-up" class="text-[#0C4DA2] w-5 h-5"></i>
+                        </div>
+
+                        <!-- Date (Left Side Desktop) -->
+                        <div class="hidden md:block text-right pr-12">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-600 font-bold text-sm border border-slate-200">
+                                Sept 2023 - Aug 2024
+                            </span>
+                        </div>
+
+                        <!-- Card (Right Side Desktop) -->
+                        <div class="ml-16 md:ml-0 md:col-start-2">
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative">
+                                 <!-- Mobile Date -->
+                                 <div class="md:hidden mb-3">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-bold text-xs border border-slate-200">
+                                        Sept 2023 - Aug 2024
+                                    </span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg heading-font mb-1">Sr. Digital Marketing Strategist</h3>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">RR GEDA Group</div>
+                                <ul class="space-y-2 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                                    <li>Led SEO and content strategy to improve brand visibility</li>
+                                    <li>Managed data-backed content planning and cross-platform digital campaigns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 (Left on Desktop) -->
+                    <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center group">
+                         <!-- Icon Marker -->
+                         <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-100 flex items-center justify-center z-10 shadow-sm group-hover:scale-110 group-hover:border-[#0C4DA2] transition-all duration-300">
+                            <i data-lucide="rocket" class="text-[#0C4DA2] w-5 h-5"></i>
+                        </div>
+
+                        <!-- Card (Left Side Desktop) -->
+                        <div class="ml-16 md:ml-0">
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative text-left">
+                                 <!-- Mobile Date -->
+                                 <div class="md:hidden mb-3">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-bold text-xs border border-slate-200">
+                                        2021 - 2023
+                                    </span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg heading-font mb-1">Co-founder (Early Stage)</h3>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">JugaadHai</div>
+                                <ul class="space-y-2 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                                    <li>Supported client acquisition and digital project execution</li>
+                                    <li>Managed SEO and content optimization for e-commerce and service brands</li>
+                                    <li>Built foundational digital workflows for small business clients</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Date (Right Side Desktop) -->
+                        <div class="hidden md:block pl-12">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-600 font-bold text-sm border border-slate-200">
+                                2021 - 2023
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 bg-white">
+        <div class="max-w-5xl mx-auto bg-[#0C4DA2] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+            <div class="p-10 md:w-5/12 bg-blue-900 text-white flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold mb-3 heading-font">Get in touch</h3>
+                    <p class="text-blue-200 text-sm mb-10 leading-relaxed">
+                        Available for public systems projects, governance analytics, and data-driven decision support.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Anti-Scraping: Details are injected via JS on interaction -->
+                        <div class="flex items-center gap-4 group">
+                            <i data-lucide="mail" class="text-blue-300 w-5 h-5 flex-shrink-0"></i>
+                            <div>
+                                <div class="text-xs text-blue-300 uppercase font-bold tracking-wider">Email</div>
+                                <span class="text-sm reveal-btn font-medium" id="email-container" onclick="revealContact('email')">Click to reveal</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group">
+                             <i data-lucide="phone" class="text-blue-300 w-5 h-5 flex-shrink-0"></i>
+                            <div>
+                                <div class="text-xs text-blue-300 uppercase font-bold tracking-wider">Phone</div>
+                                <span class="text-sm reveal-btn font-medium" id="phone-container" onclick="revealContact('phone')">Click to reveal</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group">
+                            <i data-lucide="linkedin" class="text-blue-300 w-5 h-5 flex-shrink-0"></i>
+                            <div>
+                                <div class="text-xs text-blue-300 uppercase font-bold tracking-wider">LinkedIn</div>
+                                <a href="https://www.linkedin.com/in/sanskarydv22" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-white hover:underline transition-colors font-medium">Connect Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group">
+                            <i data-lucide="twitter" class="text-blue-300 w-5 h-5 flex-shrink-0"></i>
+                            <div>
+                                <div class="text-xs text-blue-300 uppercase font-bold tracking-wider">Twitter</div>
+                                <a href="https://x.com/sanskarydv22" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-white hover:underline transition-colors font-medium">Follow Updates</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                   <div class="text-xs text-blue-300 uppercase tracking-widest mb-1 font-bold">Base Location</div>
+                   <div class="font-medium text-lg heading-font">Madhya Pradesh, India</div>
+                </div>
+            </div>
+            
+            <div class="p-10 md:w-7/12 bg-white">
+                <!-- Netlify Forms enabled -->
+                <form class="space-y-5" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-md focus:ring-2 focus:ring-[#0C4DA2] focus:border-transparent outline-none transition-all" placeholder="Sharma Ji" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-md focus:ring-2 focus:ring-[#0C4DA2] focus:border-transparent outline-none transition-all" placeholder="sharma.ji@janta.in" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Subject</label>
+                         <select name="subject" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-md focus:ring-2 focus:ring-[#0C4DA2] focus:border-transparent outline-none transition-all">
+                            <option>Governance / Public Systems</option>
+                            <option>Data Analysis Project</option>
+                            <option>Digital Strategy Inquiry</option>
+                            <option>Other (Chai, Samosa & Data discussion)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Message</label>
+                        <textarea name="message" required rows="4" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-md focus:ring-2 focus:ring-[#0C4DA2] focus:border-transparent outline-none transition-all" placeholder="How can I help with your objectives?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 bg-[#0C4DA2] hover:bg-blue-800 text-white font-bold rounded-md transition-colors flex justify-center items-center gap-2">
+                        Send Message <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="font-bold text-xl text-slate-900 heading-font tracking-tight uppercase">Sanskar Yadav</div>
+                <p class="text-slate-500 text-sm mt-1">Public Systems & Data Specialist</p>
+            </div>
+            <div class="text-slate-500 text-sm text-center md:text-right">
+                &copy; <span id="year"></span> Sanskar Yadav. All rights reserved.<br/>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm', 'py-3');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('shadow-sm', 'py-3');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Sticky Navigation Feedback (Intersection Observer)
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".nav-link");
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "-30% 0px -30% 0px", 
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let currentId = entry.target.getAttribute("id");
+                    navLi.forEach((li) => {
+                        li.classList.remove("active");
+                        if (li.getAttribute("onclick").includes(currentId)) {
+                            li.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        // Smooth Scroll
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            }
+        }
+
+        // Anti-Scraping / Scam Proofing
+        function revealContact(type) {
+            if (type === 'email') {
+                const user = 'work.sanskaryadav';
+                const domain = 'gmail.com';
+                const email = user + '@' + domain;
+                const container = document.getElementById('email-container');
+                container.innerHTML = `<a href="mailto:${email}" class="hover:underline text-white font-medium">${email}</a>`;
+                container.onclick = null;
+                container.classList.remove('reveal-btn');
+            } else if (type === 'phone') {
+                const p1 = '626';
+                const p2 = '551';
+                const p3 = '6569';
+                const country = '+91';
+                const fullPhone = country + ' ' + p1 + '-' + p2 + '-' + p3;
+                const cleanPhone = country + p1 + p2 + p3;
+                
+                const container = document.getElementById('phone-container');
+                container.innerHTML = `<a href="tel:${cleanPhone}" class="hover:underline text-white font-medium">${fullPhone}</a>`;
+                container.onclick = null;
+                container.classList.remove('reveal-btn');
+            }
+        }
+    </script>
+</body>
+</html>
