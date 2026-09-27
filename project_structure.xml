@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sanskaryadav-portfolio-v2" path="e:\San is Coding\sanskaryadav-portfolio-v2">
+  <directory name="public" description="Static web assets and public files">
+    <directory name="cv">
+      <file name="sanskar-yadav-cv.pdf" description="Curriculum Vitae document (PDF)" />
+    </directory>
+    <directory name="images">
+      <directory name="sanskar">
+        <file name="sanskar-portrait-about.jpg" description="Authentic portrait photography for About section" />
+        <file name="sanskar-speaking-hero.png" description="Authentic speaking portrait cutout for Hero section" />
+      </directory>
+    </directory>
+    <file name="favicon.svg" description="Site favicon icon" />
+    <file name="icons.svg" description="SVG icon assets" />
+  </directory>
+
+  <directory name="reference" description="Master specification documents & legacy reference">
+    <directory name="portfolio" description="PRIMARY SOURCE OF TRUTH (Locked specifications)">
+      <file name="01_PROJECT_BRIEF.md" description="Identity, brand narrative, target audience & core positioning" />
+      <file name="02_PROJECTS.md" description="Master detailed case study source of truth for all 6 projects" />
+      <file name="03_DESIGN_SYSTEM.md" description="Visual direction, typography, colors, component design & motion language" />
+      <file name="04_BUILD_SPEC.md" description="Page structure, section order, build rules & QA requirements" />
+    </directory>
+    <directory name="old-site">
+      <file name="index.html" description="Legacy portfolio HTML source (for reference info only)" />
+    </directory>
+    <file name="about_positioning.md" description="Detailed guidance on about section positioning" />
+    <file name="project_selected.md" description="Selected work display instructions" />
+  </directory>
+
+  <directory name="src" description="Application source code (React + TypeScript)">
+    <directory name="assets" description="Static imported code assets" />
+
+    <directory name="components" description="Reusable UI components">
+      <directory name="ui">
+        <file name="ProjectCard.tsx" description="Card component for project inventory display" />
+        <file name="SystemMap.tsx" description="SVG system visualization diagram component" />
+        <file name="TextReveal.tsx" description="Masked typography reveal animation component" />
+        <file name="TextScramble.tsx" description="Terminal scramble text effect component" />
+      </directory>
+    </directory>
+
+    <directory name="data" description="Structured data source files">
+      <file name="experience.ts" description="Track record & career history data" />
+      <file name="personal.ts" description="Personal biography, contact & social links" />
+      <file name="projects.ts" description="Project metadata & inventory array" />
+      <file name="skills.ts" description="Capability matrix & skill groupings" />
+    </directory>
+
+    <directory name="layouts" description="Layout containers & structural shell">
+      <file name="Footer.tsx" description="Page footer layout component" />
+      <file name="Navigation.tsx" description="Header navigation bar & mobile drawer component" />
+      <file name="RootLayout.tsx" description="Global layout wrapper container" />
+    </directory>
+
+    <directory name="lib" description="Utilities, helpers & TypeScript definitions">
+      <file name="motion.ts" description="Framer Motion / Motion for React spring curves & durations" />
+      <file name="types.ts" description="TypeScript interfaces & type declarations" />
+    </directory>
+
+    <directory name="sections" description="Homepage content sections">
+      <file name="About.tsx" description="Positioning & About section component" />
+      <file name="Contact.tsx" description="Direct inquiry form & verified channels component" />
+      <file name="Experience.tsx" description="Track record execution log component" />
+      <file name="Hero.tsx" description="Main hero introduction section component" />
+      <file name="Projects.tsx" description="Selected work & system inventory section component" />
+    </directory>
+
+    <file name="App.tsx" description="Main React root application component" />
+    <file name="index.css" description="Global CSS, Tailwind imports & design system CSS tokens" />
+    <file name="main.tsx" description="Vite React DOM entry point" />
+  </directory>
+
+  <file name=".gitignore" description="Git ignore rules" />
+  <file name="CLAUDE.md" description="Project instructions & master guideline rules for AI agents" />
+  <file name="eslint.config.js" description="ESLint linter configuration" />
+  <file name="index.html" description="HTML entry template & meta typography links" />
+  <file name="package.json" description="Project dependencies, scripts & metadata" />
+  <file name="package-lock.json" description="NPM lockfile" />
+  <file name="README.md" description="Repository overview" />
+  <file name="tsconfig.app.json" description="TypeScript application configuration" />
+  <file name="tsconfig.json" description="Root TypeScript configuration" />
+  <file name="tsconfig.node.json" description="TypeScript Node/Vite build configuration" />
+  <file name="vite.config.ts" description="Vite bundler configuration & path aliases (@/)" />
+</project>

@@ -1,8 +1,137 @@
 @import "tailwindcss";
 
+/* ─── Master Design Tokens (Editorial × Modern Digital Product) ───── */
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Colors */
+  --color-navy: #0A1020;
+  --color-navy-surface: #111A30;
+  --color-navy-border: rgba(255, 255, 255, 0.1);
+  --color-editorial-bg: #FAF9F5;
+  --color-editorial-surface: #FFFFFF;
+  --color-ink: #121316;
+  --color-ink-secondary: #4A4E5A;
+  --color-ink-tertiary: #8A8E9A;
+  --color-gold: #C5A059;
+  --color-gold-hover: #D4AF37;
+  --color-gold-muted: rgba(197, 160, 89, 0.18);
+  --color-rule: #E6E3DB;
+}
+
+/* ─── Base Reset & Page Rules ──────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--color-navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Lenis Smooth Scrolling Integration ───────────────────── */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 body {
+  font-family: var(--font-sans);
+  background-color: var(--color-navy);
+  color: #E2E8F0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold-muted);
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ─── Hero Buttons & Subtle Hover States ───────────────────── */
+
+.btn-primary-gold {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-gold);
+  color: #0A1020;
+  font-weight: 600;
+  border: 1px solid var(--color-gold);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  isolation: isolate;
+}
+
+.btn-primary-gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-gold-hover);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.btn-primary-gold:hover::before {
+  transform: translateY(0);
+}
+
+.btn-primary-gold:hover {
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+}
+
+.btn-secondary-dark {
+  background-color: transparent;
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary-dark:hover {
+  border-color: var(--color-gold);
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ─── Editorial Section Headers & Accents ──────────────────── */
+
+.editorial-serif {
+  font-family: var(--font-serif);
+}
+
+.editorial-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }

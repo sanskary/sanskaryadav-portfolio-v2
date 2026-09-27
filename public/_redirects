@@ -1,0 +1,5 @@
+# Redirect bare domain to www
+https://sanskaryadav.in/* https://www.sanskaryadav.in/:splat 301!
+
+# Redirect Netlify subdomain to www
+https://sanskar-yadav-portfolio.netlify.app/* https://www.sanskaryadav.in/:splat 301!

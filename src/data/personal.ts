@@ -2,30 +2,29 @@ import type { PersonalInfo } from '@/lib/types';
 
 export const personal: PersonalInfo = {
   name: 'Sanskar Yadav',
-  title: 'Technology, Data, AI and Strategy',
+  title: 'Political Communication & Digital Strategy',
+  tagline: 'Research · Strategy · Communication · AI · Data · Digital Systems',
   bio: [
-    'Public Systems and Data professional focused on solving governance and organizational challenges using technology, analytics, and structured research.',
-    'With a background in Economics and training in Python, Data Science, and AI, working at the intersection of public issues, data analysis, and digital systems. Particularly interested in building scalable digital tools that improve governance, transparency, and citizen engagement.',
+    'Based in Gwalior, Madhya Pradesh, I work at the intersection of political communication, digital strategy, research, AI, and public systems.',
+    'My practice starts with complex real-world and civic challenges: researching ground realities, structuring unstructured information, designing practical digital systems, and deploying technology—including AI—where it creates genuine public value.',
+    'With a foundation in Economics and analytical research, I connect ground-level field intelligence with strategic decision-making and operational execution.',
   ],
   focusAreas: [
-    'Public issue monitoring',
-    'Data-driven decision support',
-    'Grievance systems',
-    'Administrative intelligence',
+    'Political Intelligence & Strategy',
+    'Civic Technology & Public Grievance Platforms',
+    'Electoral AI & Document Processing',
+    'Constituency Digital Infrastructure',
+    'Organisational Reporting & Automation',
+    'Grassroots Research & Field Intelligence',
   ],
-  location: 'Madhya Pradesh, India',
-  email: 'work.sanskaryadav@gmail.com',
+  location: 'Gwalior, Madhya Pradesh, India',
+  email: 'work@sanskaryadav.in',
   phone: '+91 626-551-6569',
   links: [
     {
       platform: 'LinkedIn',
       url: 'https://www.linkedin.com/in/sanskarydv22',
       label: 'Connect Profile',
-    },
-    {
-      platform: 'X',
-      url: 'https://x.com/sanskarydv22',
-      label: 'Follow Updates',
     },
   ],
 };

@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // Shared TypeScript interfaces for portfolio content.
-// All data files import from here to ensure a single source of truth.
+// Sourced strictly from /reference/portfolio/01_PROJECT_BRIEF.md & 02_PROJECTS.md
 // ---------------------------------------------------------------------------
 
 export interface Project {
@@ -8,10 +8,14 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  status: 'live' | 'internal' | 'archived';
+  status: 'live' | 'internal' | 'production-ready' | 'framework';
   url?: string;
+  rel?: string;
   tags: string[];
-  year?: number;
+  isFlagship?: boolean;
+  takeaway?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface Experience {
@@ -30,6 +34,7 @@ export interface SocialLink {
 export interface PersonalInfo {
   name: string;
   title: string;
+  tagline: string;
   bio: string[];
   focusAreas: string[];
   location: string;
